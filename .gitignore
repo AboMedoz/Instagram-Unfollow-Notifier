@@ -1,6 +1,5 @@
 # .gitignore
-config.py
 session*
-/build/
-/dist/
+build/
+dist/
 main.spec
