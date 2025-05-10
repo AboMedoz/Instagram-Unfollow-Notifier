@@ -44,6 +44,10 @@ while True:
     try:
         current_followers = profile.get_followers()
 
+        if current_followers != followers:
+            unfollowers = [follower for follwer in current_followers if follwer not in followers]
+            print(f"User/s unfollowed you: {unfollowers}")
+
         if len(current_followers) < len(followers):
             unfollowers = list(set(followers) - set(current_followers))
             print(f"User/s unfollowed you: {unfollowers}")
